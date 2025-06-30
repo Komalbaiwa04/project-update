@@ -1,3 +1,17 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import tensorflow as tf
+import keras
+from tensorflow.keras import layers
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Rescaling, GlobalAveragePooling2D
+from tensorflow.keras import layers, optimizers, callbacks
+from sklearn.utils.class_weight import compute_class_weight
+from tensorflow.keras.applications import EfficientNetV2B2
+from sklearn.metrics import confusion_matrix, classification_report
+import gradio as gr
+
 dataset_dir=r"C:\Users\seeno\Downloads\archive.zip\TrashType_Image_Dataset"
 image_size=(124,124)
 batch_size=32
