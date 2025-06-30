@@ -1,0 +1,13 @@
+dataset_dir=r"C:\Users\seeno\Downloads\archive.zip\TrashType_Image_Dataset"
+image_size=(124,124)
+batch_size=32
+seed=42
+train_ds=tf.keras.utils.image_dataset_from_directory(
+    dataset_dir,
+    validation_split=0.2,
+    subset="training",
+    seed=seed,
+    shuffle=True,
+    image_size=image_size,
+    batch_size=batch_size
+)
